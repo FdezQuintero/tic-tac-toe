@@ -23,6 +23,21 @@ public class MainActivity extends Activity {
     boolean p1Mat[][] = new boolean[3][3];
     boolean p2Mat[][] = new boolean[3][3];
 
+    int[] i = new int[1];
+    int[] j = new int[1];
+
+    boolean[] turn1 = {true};
+    boolean[] lock11 = {false};
+    boolean[] lock12 = {false};
+    boolean[] lock13 = {false};
+    boolean[] lock21 = {false};
+    boolean[] lock22 = {false};
+    boolean[] lock23 = {false};
+    boolean[] lock31 = {false};
+    boolean[] lock32 = {false};
+    boolean[] lock33 = {false};
+    boolean[] win = {false};
+
     //VICTORY CONDITION
     //There are 8 possible victory conditions:
     public boolean victoryAchieved(boolean Mat[][], boolean Turn[]){
@@ -42,6 +57,27 @@ public class MainActivity extends Activity {
             win=true;
         }
         return win;
+    }
+
+    public void finish(){
+        lock11[0]=true;
+        lock12[0]=true;
+        lock13[0]=true;
+        lock21[0]=true;
+        lock22[0]=true;
+        lock23[0]=true;
+        lock31[0]=true;
+        lock32[0]=true;
+        lock33[0]=true;
+        img11.setBackgroundResource(R.color.myGrey);
+        img12.setBackgroundResource(R.color.myGrey);
+        img13.setBackgroundResource(R.color.myGrey);
+        img21.setBackgroundResource(R.color.myGrey);
+        img22.setBackgroundResource(R.color.myGrey);
+        img23.setBackgroundResource(R.color.myGrey);
+        img31.setBackgroundResource(R.color.myGrey);
+        img32.setBackgroundResource(R.color.myGrey);
+        img33.setBackgroundResource(R.color.myGrey);
     }
 
     //Initialise Players Matrices
@@ -64,8 +100,6 @@ public class MainActivity extends Activity {
         img33 = findViewById(R.id.s9);
         reset_button = findViewById(R.id.resetButton);
 
-        final int[] i = new int[1];
-        final int[] j = new int[1];
 
         for(i[0] =0; i[0] <3; i[0]++){
             for(j[0] =0; j[0] <3; j[0]++) {
@@ -73,20 +107,6 @@ public class MainActivity extends Activity {
                 p2Mat[i[0]][j[0]]=false;
             }
         }
-
-        final boolean[] turn1 = {true};
-        final boolean[] lock11 = {false};
-        final boolean[] lock12 = {false};
-        final boolean[] lock13 = {false};
-        final boolean[] lock21 = {false};
-        final boolean[] lock22 = {false};
-        final boolean[] lock23 = {false};
-        final boolean[] lock31 = {false};
-        final boolean[] lock32 = {false};
-        final boolean[] lock33 = {false};
-        final boolean[] win = {false};
-
-        //VICTORY ACTIONS
 
         //ROW 1
         img11.setOnClickListener(new View.OnClickListener() {
@@ -107,24 +127,7 @@ public class MainActivity extends Activity {
                     turn1[0] = true;
                 }
                 if (win[0]){
-                    lock11[0]=true;
-                    lock12[0]=true;
-                    lock13[0]=true;
-                    lock21[0]=true;
-                    lock22[0]=true;
-                    lock23[0]=true;
-                    lock31[0]=true;
-                    lock32[0]=true;
-                    lock33[0]=true;
-                    img11.setBackgroundResource(R.color.myGrey);
-                    img12.setBackgroundResource(R.color.myGrey);
-                    img13.setBackgroundResource(R.color.myGrey);
-                    img21.setBackgroundResource(R.color.myGrey);
-                    img22.setBackgroundResource(R.color.myGrey);
-                    img23.setBackgroundResource(R.color.myGrey);
-                    img31.setBackgroundResource(R.color.myGrey);
-                    img32.setBackgroundResource(R.color.myGrey);
-                    img33.setBackgroundResource(R.color.myGrey);
+                    finish();
                 }
                 lock11[0] = true;
             }
@@ -148,24 +151,7 @@ public class MainActivity extends Activity {
                     turn1[0] = true;
                 }
                 if (win[0]){
-                    lock11[0]=true;
-                    lock12[0]=true;
-                    lock13[0]=true;
-                    lock21[0]=true;
-                    lock22[0]=true;
-                    lock23[0]=true;
-                    lock31[0]=true;
-                    lock32[0]=true;
-                    lock33[0]=true;
-                    img11.setBackgroundResource(R.color.myGrey);
-                    img12.setBackgroundResource(R.color.myGrey);
-                    img13.setBackgroundResource(R.color.myGrey);
-                    img21.setBackgroundResource(R.color.myGrey);
-                    img22.setBackgroundResource(R.color.myGrey);
-                    img23.setBackgroundResource(R.color.myGrey);
-                    img31.setBackgroundResource(R.color.myGrey);
-                    img32.setBackgroundResource(R.color.myGrey);
-                    img33.setBackgroundResource(R.color.myGrey);
+                    finish();
                 }
                 lock12[0] = true;
             }
@@ -189,24 +175,7 @@ public class MainActivity extends Activity {
                     turn1[0] = true;
                 }
                 if (win[0]){
-                    lock11[0]=true;
-                    lock12[0]=true;
-                    lock13[0]=true;
-                    lock21[0]=true;
-                    lock22[0]=true;
-                    lock23[0]=true;
-                    lock31[0]=true;
-                    lock32[0]=true;
-                    lock33[0]=true;
-                    img11.setBackgroundResource(R.color.myGrey);
-                    img12.setBackgroundResource(R.color.myGrey);
-                    img13.setBackgroundResource(R.color.myGrey);
-                    img21.setBackgroundResource(R.color.myGrey);
-                    img22.setBackgroundResource(R.color.myGrey);
-                    img23.setBackgroundResource(R.color.myGrey);
-                    img31.setBackgroundResource(R.color.myGrey);
-                    img32.setBackgroundResource(R.color.myGrey);
-                    img33.setBackgroundResource(R.color.myGrey);
+                    finish();
                 }
                 lock13[0] = true;
             }
@@ -231,24 +200,7 @@ public class MainActivity extends Activity {
                     turn1[0] = true;
                 }
                 if (win[0]){
-                    lock11[0]=true;
-                    lock12[0]=true;
-                    lock13[0]=true;
-                    lock21[0]=true;
-                    lock22[0]=true;
-                    lock23[0]=true;
-                    lock31[0]=true;
-                    lock32[0]=true;
-                    lock33[0]=true;
-                    img11.setBackgroundResource(R.color.myGrey);
-                    img12.setBackgroundResource(R.color.myGrey);
-                    img13.setBackgroundResource(R.color.myGrey);
-                    img21.setBackgroundResource(R.color.myGrey);
-                    img22.setBackgroundResource(R.color.myGrey);
-                    img23.setBackgroundResource(R.color.myGrey);
-                    img31.setBackgroundResource(R.color.myGrey);
-                    img32.setBackgroundResource(R.color.myGrey);
-                    img33.setBackgroundResource(R.color.myGrey);
+                    finish();
                 }
                 lock21[0] = true;
             }
@@ -272,24 +224,7 @@ public class MainActivity extends Activity {
                     turn1[0] = true;
                 }
                 if (win[0]){
-                    lock11[0]=true;
-                    lock12[0]=true;
-                    lock13[0]=true;
-                    lock21[0]=true;
-                    lock22[0]=true;
-                    lock23[0]=true;
-                    lock31[0]=true;
-                    lock32[0]=true;
-                    lock33[0]=true;
-                    img11.setBackgroundResource(R.color.myGrey);
-                    img12.setBackgroundResource(R.color.myGrey);
-                    img13.setBackgroundResource(R.color.myGrey);
-                    img21.setBackgroundResource(R.color.myGrey);
-                    img22.setBackgroundResource(R.color.myGrey);
-                    img23.setBackgroundResource(R.color.myGrey);
-                    img31.setBackgroundResource(R.color.myGrey);
-                    img32.setBackgroundResource(R.color.myGrey);
-                    img33.setBackgroundResource(R.color.myGrey);
+                    finish();
                 }
                 lock22[0] = true;
             }
@@ -313,24 +248,7 @@ public class MainActivity extends Activity {
                     turn1[0] = true;
                 }
                 if (win[0]){
-                    lock11[0]=true;
-                    lock12[0]=true;
-                    lock13[0]=true;
-                    lock21[0]=true;
-                    lock22[0]=true;
-                    lock23[0]=true;
-                    lock31[0]=true;
-                    lock32[0]=true;
-                    lock33[0]=true;
-                    img11.setBackgroundResource(R.color.myGrey);
-                    img12.setBackgroundResource(R.color.myGrey);
-                    img13.setBackgroundResource(R.color.myGrey);
-                    img21.setBackgroundResource(R.color.myGrey);
-                    img22.setBackgroundResource(R.color.myGrey);
-                    img23.setBackgroundResource(R.color.myGrey);
-                    img31.setBackgroundResource(R.color.myGrey);
-                    img32.setBackgroundResource(R.color.myGrey);
-                    img33.setBackgroundResource(R.color.myGrey);
+                    finish();
                 }
                 lock23[0] = true;
             }
@@ -355,24 +273,7 @@ public class MainActivity extends Activity {
                     turn1[0] = true;
                 }
                 if (win[0]){
-                    lock11[0]=true;
-                    lock12[0]=true;
-                    lock13[0]=true;
-                    lock21[0]=true;
-                    lock22[0]=true;
-                    lock23[0]=true;
-                    lock31[0]=true;
-                    lock32[0]=true;
-                    lock33[0]=true;
-                    img11.setBackgroundResource(R.color.myGrey);
-                    img12.setBackgroundResource(R.color.myGrey);
-                    img13.setBackgroundResource(R.color.myGrey);
-                    img21.setBackgroundResource(R.color.myGrey);
-                    img22.setBackgroundResource(R.color.myGrey);
-                    img23.setBackgroundResource(R.color.myGrey);
-                    img31.setBackgroundResource(R.color.myGrey);
-                    img32.setBackgroundResource(R.color.myGrey);
-                    img33.setBackgroundResource(R.color.myGrey);
+                    finish();
                 }
                 lock31[0] = true;
             }
@@ -396,24 +297,7 @@ public class MainActivity extends Activity {
                     turn1[0] = true;
                 }
                 if (win[0]){
-                    lock11[0]=true;
-                    lock12[0]=true;
-                    lock13[0]=true;
-                    lock21[0]=true;
-                    lock22[0]=true;
-                    lock23[0]=true;
-                    lock31[0]=true;
-                    lock32[0]=true;
-                    lock33[0]=true;
-                    img11.setBackgroundResource(R.color.myGrey);
-                    img12.setBackgroundResource(R.color.myGrey);
-                    img13.setBackgroundResource(R.color.myGrey);
-                    img21.setBackgroundResource(R.color.myGrey);
-                    img22.setBackgroundResource(R.color.myGrey);
-                    img23.setBackgroundResource(R.color.myGrey);
-                    img31.setBackgroundResource(R.color.myGrey);
-                    img32.setBackgroundResource(R.color.myGrey);
-                    img33.setBackgroundResource(R.color.myGrey);
+                    finish();
                 }
                 lock32[0] = true;
             }
@@ -437,24 +321,7 @@ public class MainActivity extends Activity {
                     turn1[0] = true;
                 }
                 if (win[0]){
-                    lock11[0]=true;
-                    lock12[0]=true;
-                    lock13[0]=true;
-                    lock21[0]=true;
-                    lock22[0]=true;
-                    lock23[0]=true;
-                    lock31[0]=true;
-                    lock32[0]=true;
-                    lock33[0]=true;
-                    img11.setBackgroundResource(R.color.myGrey);
-                    img12.setBackgroundResource(R.color.myGrey);
-                    img13.setBackgroundResource(R.color.myGrey);
-                    img21.setBackgroundResource(R.color.myGrey);
-                    img22.setBackgroundResource(R.color.myGrey);
-                    img23.setBackgroundResource(R.color.myGrey);
-                    img31.setBackgroundResource(R.color.myGrey);
-                    img32.setBackgroundResource(R.color.myGrey);
-                    img33.setBackgroundResource(R.color.myGrey);
+                    finish();
                 }
                 lock33[0] = true;
             }
