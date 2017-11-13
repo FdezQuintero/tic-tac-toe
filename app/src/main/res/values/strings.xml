@@ -5,6 +5,6 @@
     <string name="player2turn_text">Turno del jugador 2</string>
     <string name="reset">Reset</string>
     <string name="new_game">Jugar otra partida</string>
-    <string name="player1winner_text">Ha ganado el jugador 1</string>
-    <string name="player2winner_text">Ha ganado el jugador 2</string>
+    <string name="player1winner_text">¡Ha ganado el jugador 1!</string>
+    <string name="player2winner_text">¡Ha ganado el jugador 2!</string>
 </resources>
