@@ -1,11 +1,10 @@
 <resources>
     <string name="app_name">Tic Tac Toe</string>
     <string name="img_name">Square</string>
-    <string name="player1turn_text">Turno del jugador 1</string>
-    <string name="player2turn_text">Turno del jugador 2</string>
+    <string name="player1turn_text">Player 1 turn</string>
+    <string name="player2turn_text">Player 2 turn</string>
     <string name="reset">Reset</string>
-    <string name="new_game">Jugar otra partida</string>
-    <string name="player1winner_text">¡Ha ganado el jugador 1!</string>
-    <string name="player2winner_text">¡Ha ganado el jugador 2!</string>
-    <string name="draw">¡Empate!</string>
+    <string name="player1winner_text">Player 1 has won!</string>
+    <string name="player2winner_text">Player 2 has won!</string>
+    <string name="draw">Draw!</string>
 </resources>
