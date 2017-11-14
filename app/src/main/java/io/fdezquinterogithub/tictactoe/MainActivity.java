@@ -26,6 +26,8 @@ public class MainActivity extends Activity {
     int[] i = new int[1];
     int[] j = new int[1];
 
+    int count=0;
+
     boolean[] turn1 = {true};
     boolean[] lock11 = {false};
     boolean[] lock12 = {false};
@@ -80,7 +82,13 @@ public class MainActivity extends Activity {
         img33.setBackgroundResource(R.color.myGrey);
     }
 
-    //Initialise Players Matrices
+    public void maxmoves(){
+        count=count+1;
+        if(count==9){
+            player_turn.setText(R.string.draw);
+            finish();
+        }
+    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -116,6 +124,7 @@ public class MainActivity extends Activity {
                     img11.setImageResource(R.drawable.ic_circle);
                     p1Mat[0][0] = true;
                     player_turn.setText(R.string.player2turn_text);
+                    maxmoves();
                     win[0]=victoryAchieved(p1Mat, turn1);
                     turn1[0] = false;
 
@@ -123,6 +132,7 @@ public class MainActivity extends Activity {
                     img11.setImageResource(R.drawable.ic_cross);
                     p2Mat[0][0] = true;
                     player_turn.setText(R.string.player1turn_text);
+                    maxmoves();
                     win[0]=victoryAchieved(p2Mat, turn1);
                     turn1[0] = true;
                 }
@@ -140,6 +150,7 @@ public class MainActivity extends Activity {
                     img12.setImageResource(R.drawable.ic_circle);
                     p1Mat[0][1] = true;
                     player_turn.setText(R.string.player2turn_text);
+                    maxmoves();
                     win[0]=victoryAchieved(p1Mat, turn1);
                     turn1[0] = false;
 
@@ -147,6 +158,7 @@ public class MainActivity extends Activity {
                     img12.setImageResource(R.drawable.ic_cross);
                     p2Mat[0][1] = true;
                     player_turn.setText(R.string.player1turn_text);
+                    maxmoves();
                     win[0]=victoryAchieved(p2Mat, turn1);
                     turn1[0] = true;
                 }
@@ -164,6 +176,7 @@ public class MainActivity extends Activity {
                     img13.setImageResource(R.drawable.ic_circle);
                     p1Mat[0][2] = true;
                     player_turn.setText(R.string.player2turn_text);
+                    maxmoves();
                     win[0]=victoryAchieved(p1Mat, turn1);
                     turn1[0] = false;
 
@@ -171,6 +184,7 @@ public class MainActivity extends Activity {
                     img13.setImageResource(R.drawable.ic_cross);
                     p2Mat[0][2] = true;
                     player_turn.setText(R.string.player1turn_text);
+                    maxmoves();
                     win[0]=victoryAchieved(p2Mat, turn1);
                     turn1[0] = true;
                 }
@@ -189,6 +203,7 @@ public class MainActivity extends Activity {
                     img21.setImageResource(R.drawable.ic_circle);
                     p1Mat[1][0] = true;
                     player_turn.setText(R.string.player2turn_text);
+                    maxmoves();
                     win[0]=victoryAchieved(p1Mat, turn1);
                     turn1[0] = false;
 
@@ -196,6 +211,7 @@ public class MainActivity extends Activity {
                     img21.setImageResource(R.drawable.ic_cross);
                     p2Mat[1][0] = true;
                     player_turn.setText(R.string.player1turn_text);
+                    maxmoves();
                     win[0]=victoryAchieved(p2Mat, turn1);
                     turn1[0] = true;
                 }
@@ -213,6 +229,7 @@ public class MainActivity extends Activity {
                     img22.setImageResource(R.drawable.ic_circle);
                     p1Mat[1][1] = true;
                     player_turn.setText(R.string.player2turn_text);
+                    maxmoves();
                     win[0]=victoryAchieved(p1Mat, turn1);
                     turn1[0] = false;
 
@@ -220,6 +237,7 @@ public class MainActivity extends Activity {
                     img22.setImageResource(R.drawable.ic_cross);
                     p2Mat[1][1] = true;
                     player_turn.setText(R.string.player1turn_text);
+                    maxmoves();
                     win[0]=victoryAchieved(p2Mat, turn1);
                     turn1[0] = true;
                 }
@@ -237,6 +255,7 @@ public class MainActivity extends Activity {
                     img23.setImageResource(R.drawable.ic_circle);
                     p1Mat[1][2] = true;
                     player_turn.setText(R.string.player2turn_text);
+                    maxmoves();
                     win[0]=victoryAchieved(p1Mat, turn1);
                     turn1[0] = false;
 
@@ -244,6 +263,7 @@ public class MainActivity extends Activity {
                     img23.setImageResource(R.drawable.ic_cross);
                     p2Mat[1][2] = true;
                     player_turn.setText(R.string.player1turn_text);
+                    maxmoves();
                     win[0]=victoryAchieved(p2Mat, turn1);
                     turn1[0] = true;
                 }
@@ -262,6 +282,7 @@ public class MainActivity extends Activity {
                     img31.setImageResource(R.drawable.ic_circle);
                     p1Mat[2][0] = true;
                     player_turn.setText(R.string.player2turn_text);
+                    maxmoves();
                     win[0]=victoryAchieved(p1Mat, turn1);
                     turn1[0] = false;
 
@@ -269,6 +290,7 @@ public class MainActivity extends Activity {
                     img31.setImageResource(R.drawable.ic_cross);
                     p2Mat[2][0] = true;
                     player_turn.setText(R.string.player1turn_text);
+                    maxmoves();
                     win[0]=victoryAchieved(p2Mat, turn1);
                     turn1[0] = true;
                 }
@@ -286,6 +308,7 @@ public class MainActivity extends Activity {
                     img32.setImageResource(R.drawable.ic_circle);
                     p1Mat[2][1] = true;
                     player_turn.setText(R.string.player2turn_text);
+                    maxmoves();
                     win[0]=victoryAchieved(p1Mat, turn1);
                     turn1[0] = false;
 
@@ -293,6 +316,7 @@ public class MainActivity extends Activity {
                     img32.setImageResource(R.drawable.ic_cross);
                     p2Mat[2][1] = true;
                     player_turn.setText(R.string.player1turn_text);
+                    maxmoves();
                     win[0]=victoryAchieved(p2Mat, turn1);
                     turn1[0] = true;
                 }
@@ -310,6 +334,7 @@ public class MainActivity extends Activity {
                     img33.setImageResource(R.drawable.ic_circle);
                     p1Mat[2][2] = true;
                     player_turn.setText(R.string.player2turn_text);
+                    maxmoves();
                     win[0]=victoryAchieved(p1Mat, turn1);
                     turn1[0] = false;
 
@@ -317,6 +342,7 @@ public class MainActivity extends Activity {
                     img33.setImageResource(R.drawable.ic_cross);
                     p2Mat[2][2] = true;
                     player_turn.setText(R.string.player1turn_text);
+                    maxmoves();
                     win[0]=victoryAchieved(p2Mat, turn1);
                     turn1[0] = true;
                 }
@@ -340,7 +366,7 @@ public class MainActivity extends Activity {
                         p2Mat[i[0]][j[0]]=false;
                     }
                 }
-
+                count=0;
                 img11.setImageResource(0);
                 img12.setImageResource(0);
                 img13.setImageResource(0);
