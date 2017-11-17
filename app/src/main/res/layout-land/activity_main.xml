@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/linearLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -29,21 +30,22 @@
         android:id="@+id/grid"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:background="@color/myBlack"
         android:columnCount="3"
         android:padding="2dp"
         android:stretchMode="columnWidth"
-        app:layout_constraintBottom_toTopOf="@+id/resetButton"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textPlayerTurn">
 
         <ImageView
             android:id="@+id/s1"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="@dimen/square_dimen"
+            android:layout_height="@dimen/square_dimen"
             android:layout_margin="1dp"
             android:background="@color/myWhite"
             android:contentDescription="@string/img_name"
@@ -51,8 +53,8 @@
 
         <ImageView
             android:id="@+id/s2"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="@dimen/square_dimen"
+            android:layout_height="@dimen/square_dimen"
             android:layout_margin="1dp"
             android:background="@color/myWhite"
             android:contentDescription="@string/img_name"
@@ -60,8 +62,8 @@
 
         <ImageView
             android:id="@+id/s3"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="@dimen/square_dimen"
+            android:layout_height="@dimen/square_dimen"
             android:layout_margin="1dp"
             android:background="@color/myWhite"
             android:contentDescription="@string/img_name"
@@ -69,8 +71,8 @@
 
         <ImageView
             android:id="@+id/s4"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="@dimen/square_dimen"
+            android:layout_height="@dimen/square_dimen"
             android:layout_margin="1dp"
             android:background="@color/myWhite"
             android:contentDescription="@string/img_name"
@@ -78,8 +80,8 @@
 
         <ImageView
             android:id="@+id/s5"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="@dimen/square_dimen"
+            android:layout_height="@dimen/square_dimen"
             android:layout_margin="1dp"
             android:background="@color/myWhite"
             android:contentDescription="@string/img_name"
@@ -87,8 +89,8 @@
 
         <ImageView
             android:id="@+id/s6"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="@dimen/square_dimen"
+            android:layout_height="@dimen/square_dimen"
             android:layout_margin="1dp"
             android:background="@color/myWhite"
             android:contentDescription="@string/img_name"
@@ -96,8 +98,8 @@
 
         <ImageView
             android:id="@+id/s7"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="@dimen/square_dimen"
+            android:layout_height="@dimen/square_dimen"
             android:layout_margin="1dp"
             android:background="@color/myWhite"
             android:contentDescription="@string/img_name"
@@ -105,8 +107,8 @@
 
         <ImageView
             android:id="@+id/s8"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="@dimen/square_dimen"
+            android:layout_height="@dimen/square_dimen"
             android:layout_margin="1dp"
             android:background="@color/myWhite"
             android:contentDescription="@string/img_name"
@@ -114,8 +116,8 @@
 
         <ImageView
             android:id="@+id/s9"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="@dimen/square_dimen"
+            android:layout_height="@dimen/square_dimen"
             android:layout_margin="1dp"
             android:background="@color/myWhite"
             android:contentDescription="@string/img_name"
@@ -127,14 +129,16 @@
         android:id="@+id/resetButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="40dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:background="@color/colorPrimaryLight"
         android:text="@string/reset"
         android:textColor="@color/colorAccent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/grid" />
+        app:layout_constraintStart_toEndOf="@+id/grid"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </android.support.constraint.ConstraintLayout>
