@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Tres En Raya</string>
+    <string name="img_name">Cuadrado</string>
+    <string name="player1turn_text">Turno del jugador 1</string>
+    <string name="player2turn_text">Turno del jugador 2</string>
+    <string name="reset">Reiniciar</string>
+    <string name="player1winner_text">¡Ha ganado el jugador 1!</string>
+    <string name="player2winner_text">¡Ha ganado el jugador 2!</string>
+    <string name="draw">¡Empate!</string>
+</resources>

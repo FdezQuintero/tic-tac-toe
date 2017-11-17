@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@color/colorPrimary">
+
+    <TextView
+        android:id="@+id/textPlayerTurn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/player1turn_text"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="@color/colorAccent"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:typeface="monospace"
+        app:layout_constraintBottom_toTopOf="@+id/grid"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <GridLayout
+        android:id="@+id/grid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:background="@color/myBlack"
+        android:columnCount="3"
+        android:padding="2dp"
+        android:stretchMode="columnWidth"
+        app:layout_constraintBottom_toTopOf="@+id/resetButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textPlayerTurn">
+
+        <ImageView
+            android:id="@+id/s1"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="1dp"
+            android:background="@color/myWhite"
+            android:contentDescription="@string/img_name"
+            android:padding="10dp" />
+
+        <ImageView
+            android:id="@+id/s2"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="1dp"
+            android:background="@color/myWhite"
+            android:contentDescription="@string/img_name"
+            android:padding="10dp" />
+
+        <ImageView
+            android:id="@+id/s3"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="1dp"
+            android:background="@color/myWhite"
+            android:contentDescription="@string/img_name"
+            android:padding="10dp" />
+
+        <ImageView
+            android:id="@+id/s4"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="1dp"
+            android:background="@color/myWhite"
+            android:contentDescription="@string/img_name"
+            android:padding="10dp" />
+
+        <ImageView
+            android:id="@+id/s5"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="1dp"
+            android:background="@color/myWhite"
+            android:contentDescription="@string/img_name"
+            android:padding="10dp" />
+
+        <ImageView
+            android:id="@+id/s6"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="1dp"
+            android:background="@color/myWhite"
+            android:contentDescription="@string/img_name"
+            android:padding="10dp" />
+
+        <ImageView
+            android:id="@+id/s7"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="1dp"
+            android:background="@color/myWhite"
+            android:contentDescription="@string/img_name"
+            android:padding="10dp" />
+
+        <ImageView
+            android:id="@+id/s8"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="1dp"
+            android:background="@color/myWhite"
+            android:contentDescription="@string/img_name"
+            android:padding="10dp" />
+
+        <ImageView
+            android:id="@+id/s9"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="1dp"
+            android:background="@color/myWhite"
+            android:contentDescription="@string/img_name"
+            android:padding="10dp" />
+
+    </GridLayout>
+
+    <Button
+        android:id="@+id/resetButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:layout_marginTop="40dp"
+        android:background="@color/colorPrimaryLight"
+        android:text="@string/reset"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/grid" />
+
+</android.support.constraint.ConstraintLayout>
